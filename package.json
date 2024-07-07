@@ -6,9 +6,9 @@
     "dev": "parcel src/index.html",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
-    "build": "parcel build src/index.html --dist-dir dist",
-    "start": "node server.js",
-    "deploy": "gh-pages -d build"
+    "build": "parcel build ./src/index.html --public-url ./",
+    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
